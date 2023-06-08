@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Meal App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Meal App</h1>
+      <div class="search-form">
+        <input type="text" id="searchInput" placeholder="Search meals...">
+        <button type="button" id="searchButton" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="mealList" class="row"></div>
+    </div>
+  </main>
+
+  <div id="mealModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mealModalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="mealModalDescription"></p>
+          <h6>Ingredients:</h6>
+          <ul id="mealModalIngredients"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <form id="addMealForm">
+        <div class="form-group">
+          <label for="mealName">Name:</label>
+          <input type="text" class="form-control" id="mealName" required>
+        </div>
+        <div class="form-group">
+          <label for="mealDescription">Description:</label>
+          <textarea class="form-control" id="mealDescription" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="mealIngredients">Ingredients (comma-separated):</label>
+          <input type="text" class="form-control" id="mealIngredients" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Meal</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
